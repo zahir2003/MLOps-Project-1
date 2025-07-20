@@ -1,0 +1,191 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f6f9fc; /* soft subtle background for browser in light mode */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  transition: background 0.5s ease;
+}
+
+.toggle-container {
+  align-self: flex-end;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #0072ff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.container {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  color: #333;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 1.8em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+input:focus {
+  box-shadow: 0 0 8px rgba(33, 147, 176, 0.5);
+  transform: scale(1.02);
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.predict-button {
+  background: linear-gradient(45deg, #ff9966, #ff5e62);
+  color: white;
+  margin-top: 10px;
+}
+
+.predict-button:hover {
+  background: linear-gradient(45deg, #ff5e62, #ff9966);
+  transform: translateY(-2px);
+}
+
+.train-button {
+  background: linear-gradient(45deg, #56ab2f, #a8e063);
+  color: white;
+  margin-top: 15px;
+}
+
+.train-button:hover {
+  background: linear-gradient(45deg, #a8e063, #56ab2f);
+  transform: translateY(-2px);
+}
+
+.result {
+  margin-top: 25px;
+}
+
+.result h2 {
+  color: #333;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #1f1f1f; /* clean dark background for browser in dark mode */
+}
+
+body.dark-mode .toggle-label {
+  color: #eee;
+}
+
+body.dark-mode .container {
+  background: linear-gradient(135deg, #434343, #000000);
+  color: #fff;
+}
+
+body.dark-mode label {
+  color: #ddd;
+}
+
+body.dark-mode input {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode input:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
