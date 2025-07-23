@@ -1,5 +1,3 @@
-Here is your **professional, beautiful, recruiter-friendly README.md draft**, structured with clarity, neat markdown styling, and impressive presentation to showcase your MLOps skills:
-
 ---
 
 # 🚀 Vehicle ML Project with End-to-End MLOps Pipeline
