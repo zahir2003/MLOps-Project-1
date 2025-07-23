@@ -163,7 +163,7 @@ echo $env:MONGODB_URL
 
 ## 🙌 **Get In Touch**
 
-If you find this project inspiring or wish to discuss MLOps opportunities, feel free to connect via [LinkedIn](www.linkedin.com/in/sk-mahiduzzaman) or drop a message at [your-email@example.com](mailto:skmahiduzzaman@gmail.com).
+If you find this project inspiring or wish to discuss MLOps opportunities, feel free to connect via [www.linkedin.com/in/sk-mahiduzzaman](#) or drop a message at [skmahiduzzaman@gmail.com](mailto:your-email@example.com).
 
 ---
 
